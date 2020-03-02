@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width: 120px;
+            height: 300px;
+        }
+    .left,.right{
+        position: fixed;
+        top: 250px;
+    }
+    .left{
+        left: 0;
+    }
+    .right{
+        right: 0;
+    }
+    .left span,.right span{
+        width: 20px;
+        height: 20px;
+        background: #ccc;
+        font-size: 14px;
+        color: #333;
+        position: absolute;
+        right: 0;
+        top: 0;
+        text-align: center;
+        cursor: pointer;
+    }
+    </style>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+
+            // 点击span ，隐藏对应的div
+            $("span").click(function(){
+
+                $(this).parent().hide(400);
+                // $("div").hide();
+            });
+        })
+    </script>
+</head>
+<body>
+    <div class="left">
+        <img src="images/left.jpg" alt="">
+        <span>X</span>
+    </div>
+    <div class="right"><img src="images/right.jpg" alt=""><span>X</span></div>
+</body>
+</html>

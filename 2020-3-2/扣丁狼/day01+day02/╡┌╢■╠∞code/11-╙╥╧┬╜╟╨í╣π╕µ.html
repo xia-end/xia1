@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-右下角小广告</title>
+    <style>
+    .ad{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: none;
+    }
+    .ad span{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 30px;
+        height: 30px;
+        background-color: pink;
+        cursor: pointer;
+    }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    $(function(){
+        //.delay(2000)让后面的动画函数延迟两秒钟之后再执行
+       $(".ad").slideDown().fadeOut(150).fadeIn(150).delay(2000).slideUp();
+
+       $(".ad span").click(function(){
+            $(this).parent().stop().slideUp();
+       })
+    })
+    </script>
+</head>
+<body>
+<div class="ad">
+    <span></span>
+    <img src="images/ad.png" width="200"/>
+</div>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+<p>页面内容</p>
+</body>
+</html>

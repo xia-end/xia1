@@ -1,0 +1,293 @@
+body{
+	width:776px;
+	margin:auto;
+	background-color:#30261d;
+	position:relative;
+}
+
+header {
+	background: url(./images/header.jpg)  no-repeat;
+	width:776px;
+	height:381px;
+
+}
+h1,h2{
+	display:none;
+}
+.summary{
+	background:url(./images/top.jpg) no-repeat;
+	background-position:94px;
+}
+.page-wrapper{
+	background:url(./images/sculptures.jpg) /*repeat-y*/;
+	width:776px;
+	background-position:0px 125px;
+}
+.summary p{
+	display:none;
+
+}
+.summary p:last-child{
+	display:inline-block;
+	height:50px;
+	float: right;
+	width:160px;
+	padding:10px 110px 10px 0px;
+	font-size: 12px;
+}
+h3{
+	display:none;
+}
+.intro{
+	background:url(./images/content_bkgd.jpg) repeat-y;
+	background-position:94px 0px;
+	/*width:598px;*/
+}
+.preamble{
+	background:url(./images/h3_preamble.gif) no-repeat;
+	background-position:132px 0px;
+}
+p{
+	margin:0px;
+}
+.supporting{
+	background:url(./images/content_bkgd.jpg) repeat-y;
+	background-position:94px 5px;
+	/*width:598px;*/
+}
+.preamble,.explanation,.participation,.benefits,.requirements p{
+	font-family: "Times New Roman",Georgia;
+	font-size:14px;
+	width:363px;
+	padding-left: 132px;
+	/*padding-top: 30px;*/
+	line-height: 20px;
+	text-indent: 20px;
+}
+.preamble p{
+	padding-top: 30px;
+
+}
+.preamble p:nth-child(2){
+	text-indent:0px;
+	text-align: justify;
+	padding-right: 5px;
+}
+.preamble p:nth-child(3),p:nth-child(4){
+	padding-top: 10px;
+}
+.preamble p:last-child{
+	padding-bottom:15px;
+}
+.explanation{
+	background:url(./images/h3_explanation.gif) no-repeat;
+	background-position:132px 0px;
+}
+.explanation p{
+	padding-top: 30px;
+}
+.explanation p:last-child{
+	padding-top: 5px;
+	padding-bottom: 10px;
+}
+abbr{
+	text-decoration: none;
+	color:#741600;
+}
+.participation p:last-child{
+	padding-top:10px;
+}
+.participation p:nth-child(3){
+	padding-top: 10px;
+}
+.participation{
+	background:url(./images/h3_participation.gif) no-repeat;
+	background-position:132px 0px;
+}
+.participation p{
+	padding-top: 40px;
+}
+.participation a{
+	text-decoration: none;
+	color:#B82A09;
+}
+.participation a:hover{
+	color:#741600;
+}
+.benefits{
+	background:url(./images/h3_benefits.gif) no-repeat;
+	background-position:132px 0px;
+}
+.benefits p{
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+.requirements{
+	background:url(./images/h3_requirements.gif) no-repeat;
+	background-position:132px 0px;
+}
+.requirements p{
+	padding-top: 30px;
+}
+.requirements p:nth-child(3),p:nth-child(4),p:nth-child(5),p:nth-child(6){
+	padding-top:10px;
+}
+.requirements p:last-child{
+	text-indent: 0px;
+}
+.requirements a{
+	text-decoration: none;
+	color:#B82A09;
+}
+.requirements a:hover{
+	color:#741600;
+}
+
+.summary p:nth-child(5){
+	width:150px;
+	float: right;
+	padding:10px 110px 10px 0px;
+	font-size:14px;
+}
+.summary a{
+	color:black;
+}
+.sidebar{
+	float:right;
+	position:absolute;
+	top:410px;
+	left:502px;
+	width:150px;
+}
+.design-selection{
+	background:url(./images/h3_select.gif) no-repeat;
+	/*width:139px;*/
+
+	background-position:5px 30px;
+	padding-top:20px;
+	padding-bottom: 20px;
+	/*position:relative;*/
+}
+.design-selection ul{
+	padding-top:20px;
+}
+nav ul li a {
+	text-decoration:none;
+
+}
+nav ul{
+	list-style-type:none;
+	margin:0px;
+	padding-left: 0px;
+	text-align:right;
+	font-size:14px;
+}
+nav{
+	padding:20px 0px 10px 0px;
+}
+.design-name{
+	display:block;
+	width:120px;
+	padding-left: 30px;
+	padding-top: 5px;
+	color:#754f38;
+}
+.design-name:hover{
+	color:#741600;
+}
+.designer-name{
+	display:inline;
+	font-style:italic;
+	color:#B82A09;
+}
+.design-archives {
+	background:url(./images/h3_archives.gif) no-repeat;
+	background-position:5px 10px;
+}
+.next a{
+	color:#B82A09;
+}
+.viewall a{
+	color:#741600;
+}
+.design-archives ul{
+	padding-top:20px;
+}
+.zen-resources{
+	background:url(./images/h3_resources.gif) no-repeat;
+	background-position:5px 0px;
+	padding-left: 0px;
+}
+.zen-resources ul{
+	padding-top: 30px;
+	list-style-type:none;
+	text-align: right;
+} 
+.zen-resources ul li a{
+	text-decoration:none;
+	position:relative;
+	font-size: 14px;
+}
+.view-css{
+	width:160px;
+	position:absolute;
+	right:1px;
+
+}
+.css-resources{
+	padding-top: 20px;
+}
+.view-css a ,.css-resources a{
+	color:#754f38;
+}
+.zen-faq a{
+	color:#B82A09;
+}
+.zen-submit a{
+	color:#B82A09;
+}
+.zen-translations a{
+	color:#B82A09;
+}
+footer{
+	background:url(./images/bot.jpg) no-repeat;
+	height:83px;
+	background-position: 94px 0px;
+/*	position:relative;*/
+}
+footer a{
+	text-decoration: none;
+	color:black;
+	font-size:12px;
+	display:inline-block;
+	/*position:absolute;
+	top:2070px;
+*/
+
+}
+footer a:hover{
+	color:#B82A09;
+	cursor: pointer;
+
+}
+footer .zen-validate-html{
+	margin:15px 0px 0px 323px;
+}
+footer .zen-validate-css,footer .zen-license{
+	color:#754f38;
+}
+.requirements p:last-child{
+	float:right;
+	padding:0px;
+	display:block;
+	width:575px;
+	margin:20px 100px 0px 0px;
+}
+.requirements p:last-child a{
+	text-decoration: none;
+	color:#754f38;
+}
+.requirements p:last-child a:hover{
+	color:#B82A09;
+	cursor: pointer;
+}

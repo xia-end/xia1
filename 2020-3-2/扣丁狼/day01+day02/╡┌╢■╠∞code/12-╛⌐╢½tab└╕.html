@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12-京东tab栏</title>
+    <style>
+        div,ul,ol,li,img{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        .box{
+            width: 390px;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+        .box ul{
+            overflow: hidden;
+        }
+        .box ul li{
+            width: 20%;
+            float: left;
+            height: 50px;
+            background-color: #eee;
+            text-align: center;
+            line-height: 50px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .box ul li.cur{
+            color:#f10180;
+        }
+        .box ol li{
+            width: 390px;
+            height: 320px;
+            background-color: pink;
+            display: none;
+            position: relative;
+        }
+        .box ol li.cur{
+            display: block;
+        }
+
+        .imgBox{
+            position: absolute;
+            left: 0px;
+            top: 0;
+            width: 780px;
+        }
+        .imgBox img{
+            float: left;
+        }
+        .btnBox{
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+        }
+        .btnBox span{
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            border: 3px solid #ddd;
+            margin-left: 5px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+        .btnBox span.cur{
+            background-color: red;
+            border-color:pink;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    $(function(){
+       $(".box ul li").mouseenter(function(){
+            $(this).addClass("cur").siblings().removeClass("cur");
+
+            var i = $(this).index();
+            $(".box ol li").eq(i).addClass("cur").siblings().removeClass("cur");
+       });
+
+
+       $(".btnBox span").mouseenter(function(){
+           $(this).addClass("cur").siblings().removeClass("cur");
+
+           var i = $(this).index();
+           $(this).parent().siblings(".imgBox").animate({
+               left:i * -390
+           })
+       })
+
+    })
+    </script>
+</head>
+<body>
+    <div class="box">
+        <img src="images/tab/title.jpg" height="60" width="390"/>
+        <ul>
+            <li class="cur">大 家 电</li>
+            <li>手机通讯</li>
+            <li>生活电器</li>
+            <li>厨房小电</li>
+            <li>运动鞋包</li>
+        </ul>
+        <ol>
+            <li class="cur">
+                <!--两张图片-->
+                <div class="imgBox">
+                    <img src="images/tab/big1.jpg" height="320" width="390"/>
+                    <img src="images/tab/big2.jpg" height="320" width="390"/>
+                </div>
+                <!--两只按钮-->
+                <div class="btnBox">
+                    <span class="cur"></span>
+                    <span></span>
+                </div>
+            </li>
+            <li>
+                <!--两张图片-->
+                <div class="imgBox">
+                    <img src="images/tab/mobile1.jpg" height="320" width="390"/>
+                    <img src="images/tab/mobile2.jpg" height="320" width="390"/>
+                </div>
+                <!--两只按钮-->
+                <div class="btnBox">
+                    <span class="cur"></span>
+                    <span></span>
+                </div>
+            </li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ol>
+    </div>
+</body>
+</html>

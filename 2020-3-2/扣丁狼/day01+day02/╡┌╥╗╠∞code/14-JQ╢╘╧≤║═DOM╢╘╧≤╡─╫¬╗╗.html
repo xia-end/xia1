@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14-JQ对象和DOM对象的转换</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            // $("#box")   称为 JQ对象
+            // document.getElementById("box");   称为DOM对象
+
+            // 默认情况下，DOM对象只能调用以前原生的JS属性和方法
+            // JQuery对象，也不能直接调用原生的JS属性和方法
+            var odiv = document.getElementById("box");
+            // console.log($("#box"));
+            // console.log(odiv);
+            // odiv.hide();
+
+            // DOM对象 转 JQ对象
+            // $(odiv).hide();
+
+            // JQ对象 转 DOM对象
+            $("#box")[0].style.backgroundColor = "green";
+            $("#box").get(0).style.backgroundColor = "green";
+        })
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

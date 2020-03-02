@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+	<script src="js/jquery-3.4.1.js"></script>
+	<script>
+		$(function(){
+
+			$("button:eq(0)").click(function(){
+				$("p").css("background-color", "pink");
+			});
+
+			$("button:eq(1)").click(function(){
+				$(".left").css("background-color", "pink");
+			});
+
+			$("button:eq(2)").click(function(){
+				$("#box").css("background-color", "pink");
+			});
+
+			$("button:eq(3)").click(function(){
+				$("*").css("background-color", "pink");
+			});
+			$("button:eq(4)").click(function(){
+				$("h1, h2, h3").css("background-color", "pink");
+			});
+
+			$("button:eq(5)").click(function(){
+				$("ul li").css("background-color", "pink");
+			});
+
+
+			$("button:eq(6)").click(function(){
+				$("body>*").css("border", "1px solid #000");
+			});
+
+			$("button:eq(7)").click(function(){
+				// 选择到p后面紧挨着的一个div，如果中间有其他标签，则未选择到任何标签
+				$("p+div").css("border", "1px solid #000");
+			});
+
+			$("button:eq(8)").click(function(){
+				// 选择到p后面的所有div(p和div是同级元素)，如果中间有其他标签，也可以选择到div
+				$("p~div").css("border", "1px solid #000");
+			});
+
+
+			// $("#box").prevAll().css("background-color", "pink");
+			$("#box").nextAll().css("background-color", "pink");
+		})
+	</script>
+</head>
+
+<body>
+<button>选择所有段落标签</button>
+<button>选择class为left的标签</button>
+<button>选择id为box的标签</button>
+<button>选择所有不分类型标签</button>
+<button>选择所有标题标签</button>
+<button>选择ul里面的li标签</button>
+<button>选择body下的第一级所有标签并添加边框</button>
+<button>选择p后的一个div</button>
+<button>选择p后的所有div</button>
+
+<p>段落标签</p>
+<p>段落标签</p>
+<p>段落标签</p>
+<span>这是span</span>
+<div class="left">类选择器</div>
+<div class="left">类选择器</div>
+<div id="box">id选择器</div>
+<h1>标题1标签</h1>
+<h2>标题2标签</h2>
+<h3>标题3标签</h3>
+<ul>
+	<li>列表项</li>
+	<li>列表项</li>
+	<li>列表项</li>
+</ul>
+<ol>
+	<li>列表项
+		<div>这是li里面的div</div>
+	</li>
+	<li>列表项</li>
+	<li>列表项</li>
+</ol>
+
+
+
+</body>
+
+
+</html>

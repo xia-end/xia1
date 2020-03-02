@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>repalceChild()</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function replaceMessage() {
+			var newnode=document.createElement("p");
+			var newnodeText=document.createTextNode("JavaScriptt");
+			newnode.appendChild(newnodeText);
+			var oldNode=document.getElementById("oldnode");
+			oldNode.parentNode.replaceChild(newnode,oldNode);
+		}
+		// var newnode=document.createElement("p");
+		// var newnodeText=document.createTextNode("JavaScriptt");
+		// newnode.appendChild(newnodeText);
+		// var oldNode=document.getElementById("oldnode");
+		// console.log(oldNode.parentNode.nodeName);
+	</script>
+	<h1 id="oldnode">Java</h1>
+	<a href="javascript:replaceMessage()">"Java"替换"Javascript"</a>
+</body>
+</html>

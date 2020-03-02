@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-JQ控制css</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $("button:eq(0)").click(function(){
+                console.log($("div").css("width"));
+                console.log($("div").css("height"));
+                console.log($("div").css("background-color"));
+            });
+
+            $("button:eq(1)").click(function(){
+                $("div").css("width", "400px").css("height","300px");
+            });
+
+            $("button:eq(2)").click(function(){
+                // $("div").css({
+                //     "width":"500px",
+                //     "height": "500px",
+                //     "background-color": "pink"
+                // });
+
+                $("div").css({
+                    width: 500,
+                    height: 500,
+                    backgroundColor: "blue"
+                });
+            });
+        })
+    </script>
+</head>
+<body>
+<button>获取css属性值</button>
+<button>修改css属性</button>
+<button>同时修改多个css属性值</button>
+<div></div>
+</body>
+</html>

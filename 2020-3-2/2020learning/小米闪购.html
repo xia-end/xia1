@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>小米闪购</title>
+	<style type="text/css">
+		.d1 {
+			width:234px;
+			height:340px;
+			background:#F1EDED;
+			border-top:1px red solid;
+		}
+		.d2 {
+			color:#EF3A3B;
+			font:21px Helvetical Neue,Helvetica,Arial;
+			padding:50px 0px 0px 0px;
+			text-align: center;
+		}
+		.d1 img {
+			margin:25px auto;
+			text-align: center;
+			display: block;
+		}
+		.desc {
+			font-size: 15px;
+			color:rgba(0,0,0,.54);
+			display:block;
+			text-align: center;
+		}
+		span {
+			width:46px;
+			height:46px;
+			background:#605751;
+			color:#fff;
+			font-size:24px;
+			line-height: 46px;
+			display: block;
+			float: left;
+			margin-left: 5px;
+
+		}
+		i {
+			display: block;
+			width:5px;
+			height:5px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		var countd = document.getElementsByClassName("countdown");
+		function one(n) {
+			return n<10?"0"+n:n;
+		}
+		function getDate() {
+		var inow = new Date().getTime();
+		var inew = new Date('2020/2/25 21:00:00').getTime();
+		var countt = Math.floor((inew-inow)/1000);
+		var hour = Math.floor(countt/(60*60)%24);
+		var minute = Math.floor(countt/60%60);
+		var s = Math.floor(countt%60);
+		var str = "<span>"+hour+"</span>";
+		// vat str = "<span>"+hour+"</span>"+"<i>:</i>"+"<span>"+minute+"</span>"+"<i>:</i>"+"<span>"+s+"</span>";
+		countd.innerHTML = 1;
+		}
+		getDate();
+		setInterval(getDate,1000);
+	</script>
+	<div class="d1">
+		<div class="d2">00:00场</div>
+		<img src="./闪购.png ">
+		<div class="desc">距离结束还有</div>
+		<div class="countdown"></div>
+	</div>
+</body>
+</html>

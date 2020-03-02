@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                // (1) 获取当前标签的父节点
+                // $(".active").parent().css("border", "1px solid #000");
+                // (2) 获取当前标签的祖先节点
+                // .parents()  表示选中这个标签所有的父级盒子(包括父级盒子，父级的父级，父级的爷爷....)
+                // .parents("body")  在祖先中指定所要选中的元素
+                // $(".active").parents(".out-box").css("border", "1px solid #000");
+                //(3) 获取当前标签的祖先节点直到...
+                // .parentsUntil("指定标签")   表示往父级一层一层往上选择，直到指定标签为止(不包含指定标签)
+                $(".active").parentsUntil("body").css("border", "1px solid #000");
+
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <div class="out-box">
+        <div class="box">
+            <div>demo</div>
+            <div class="active">demo active</div>
+            <div>demo</div>
+            <div>demo</div>
+            <div>demo</div>
+            <span>我是span</span>
+        </div>
+    </div>
+
+    <button>点击我</button>
+
+</body>
+</html>

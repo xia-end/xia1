@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影风云榜</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            border: 0;
+        }
+
+        .all{
+            width: 300px;
+            height: auto;
+            border: 1px solid #ccc;
+            margin: 100px auto;
+            padding: 10px;
+        }
+        .all h2{
+            font-size: 16px;
+            color:#f10180;
+            height: 30px;
+            line-height: 30px;
+        }
+        .all li{
+            border-top: 1px dashed #ccc;
+        }
+        .title{
+            height: 30px;
+            line-height: 30px;
+        }
+        .title span{
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            line-height: 20px;
+            background: #ccc;
+            display: inline-block;
+            margin-right: 10px;
+            color:#fff;
+        }
+        /*选中前3个li里面span*/
+        /*n是从0开始的number数字*/
+        .all li:nth-child(-n+3) span{
+            background: #f10180;
+        }
+
+        .imgBox{
+            overflow: hidden;
+            margin-bottom: 10px;
+            display: none;
+        }
+        .imgBox img{
+            width: 80px;
+            float: left;
+        }
+        .imgBox p{
+            width: 210px;
+            float: left;
+            font-size: 14px;
+            margin-left: 10px;
+            color:#666;
+        }
+        .all .active .imgBox{
+            display: block;
+        }
+
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $(".all li").mouseenter(function(){
+                // 1、显示自己对应的div盒子(子级div)
+                $(this).children(".imgBox").show();
+                // 2、隐藏兄弟对应的div盒子(子级div)
+                $(this).siblings().children(".imgBox").hide();
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="all">
+    <h2>电影风云榜</h2>
+    <ul>
+        <li class="active">
+            <p class="title">
+                <span>1</span>悍城
+            </p>
+            <div class="imgBox">
+                <img src="img/001.jpg" alt="">
+                <p class="desc">《悍城》是由爱奇艺自制，刘殊巧执导，李光洁、袁文康、姜珮瑶、克拉拉、刘德凯、孙岩、高至霆、赵阳、姜卓君、梁译木、盛鉴、高冬平、银雪、…</p>
+            </div>
+        </li>
+        <li>
+            <p class="title">
+                <span>2</span>悍城
+            </p>
+            <div class="imgBox">
+                <img src="img/001.jpg" alt="">
+                <p class="desc">《悍城》是由爱奇艺自制，刘殊巧执导，李光洁、袁文康、姜珮瑶、克拉拉、刘德凯、孙岩、高至霆、赵阳、姜卓君、梁译木、盛鉴、高冬平、银雪、…</p>
+            </div>
+        </li>
+        <li>
+            <p class="title">
+                <span>3</span>悍城
+            </p>
+            <div class="imgBox">
+                <img src="img/001.jpg" alt="">
+                <p class="desc">《悍城》是由爱奇艺自制，刘殊巧执导，李光洁、袁文康、姜珮瑶、克拉拉、刘德凯、孙岩、高至霆、赵阳、姜卓君、梁译木、盛鉴、高冬平、银雪、…</p>
+            </div>
+        </li>
+        <li>
+            <p class="title">
+                <span>4</span>悍城
+            </p>
+            <div class="imgBox">
+                <img src="img/001.jpg" alt="">
+                <p class="desc">《悍城》是由爱奇艺自制，刘殊巧执导，李光洁、袁文康、姜珮瑶、克拉拉、刘德凯、孙岩、高至霆、赵阳、姜卓君、梁译木、盛鉴、高冬平、银雪、…</p>
+            </div>
+        </li>
+        <li>
+            <p class="title">
+                <span>5</span>悍城
+            </p>
+            <div class="imgBox">
+                <img src="img/001.jpg" alt="">
+                <p class="desc">《悍城》是由爱奇艺自制，刘殊巧执导，李光洁、袁文康、姜珮瑶、克拉拉、刘德凯、孙岩、高至霆、赵阳、姜卓君、梁译木、盛鉴、高冬平、银雪、…</p>
+            </div>
+        </li>
+    </ul>
+
+</div>
+</body>
+</html>
+1
+

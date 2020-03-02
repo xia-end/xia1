@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-JQ控制html</title>
+    <style>
+        div{
+            width: 400px;
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+
+            $("button:eq(0)").click(function(){
+                console.log($("div").html());
+            });
+
+            $("button:eq(1)").click(function(){
+                $("div").html("<span>我们正在学习JQuery</span>")
+            });
+
+            $("button:eq(2)").click(function(){
+                console.log($("div").text());
+            });
+
+            $("button:eq(3)").click(function(){
+
+                //text() 是专门对纯文字进行处理，即使里面出现标签，浏览器也不解析，直接当字符串展示
+                $("div").text("<span>我们正在学习JQuery</span>")
+            });
+        })
+    </script>
+</head>
+<body>
+
+<button>获取内部html</button>
+<button>修改内部html</button>
+<button>获取内部纯文字文本</button>
+<button>修改内部纯文字文本</button>
+<div>
+    <h1>JQuery介绍</h1>
+    <p>jQuery是一个快速、简洁的JavaScript框架，是继Prototype之后又一个优秀的JavaScript代码库（或JavaScript框架）。jQuery设计的宗旨是“write Less，Do More”，即倡导写更少的代码，做更多的事情。它封装JavaScript常用的功能代码，提供一种简便的JavaScript设计模式，优化HTML文档操作、事件处理、动画设计和Ajax交互。</p>
+</div>
+</body>
+</html>

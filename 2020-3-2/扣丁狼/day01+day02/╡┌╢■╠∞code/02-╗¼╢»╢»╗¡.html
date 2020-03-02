@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-滑动动画</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: pink;
+            display: none;
+        }
+        img{
+            display: block;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $("button").eq(0).click(function(){
+                $("img").slideDown();   //滑动显示
+            });
+            $("button").eq(1).click(function(){
+                $("img").slideUp(1000);   //滑动隐藏
+            });
+            $("button").eq(2).click(function(){
+                $("img").slideToggle();   //滑动显示隐藏的切换
+            });
+        })
+    </script>
+</head>
+<body>
+<button>滑动显示动画</button>
+<button>滑动隐藏动画</button>
+<button>滑动切换动画</button>
+<!--<div></div>--> <br>
+<img src="images/1.jpg" width="200"/>
+</body>
+</html>

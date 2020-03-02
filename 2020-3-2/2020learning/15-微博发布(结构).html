@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            list-style: none;
+        }
+        body{
+            background: url('./images/bg01.png') no-repeat;
+        }
+        section{
+            width: 800px;
+            background: #efefef;
+            border: 1px solid #ccc;
+            margin: 100px auto 20px;
+            padding: 20px;
+            overflow: hidden;
+        }
+        textarea{
+            width: 800px;
+            height: 100px;
+            resize: none;
+            outline-color: blueviolet;
+            padding: 10px;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+        div{
+            float: right;
+            width: 100px;
+            height: 40px;
+            color: #fff;
+            background: blueviolet;
+            line-height: 40px;
+            text-align: center;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+        ul{
+            width: 842px;
+            margin: auto;
+            background: #efefef;
+            border-bottom: 1px solid #ccc;
+        }
+        li{
+            border: 1px solid #ccc;
+            border-bottom: 0;
+            padding: 20px;
+            width: 800px;
+            overflow: hidden;
+        }
+        a{
+            margin-top: 10px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <textarea></textarea>
+        <div>发布</div>
+    </section>
+    <ul>
+        <li>
+            <p>这是一条微博</p>
+            <a href="javascript:;">删除</a>
+        </li>
+    </ul>
+</body>
+</html>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+    function fn(){
+        // 1、获取文本域的值
+        var textVal = $('textarea').val();
+
+        // 2、往ul的末尾插入li标签（es6模板拼接）
+        var aLi = `<li>
+                        <p>${textVal}</p>
+                        <a href="javascript:;">删除</a>
+                    </li>`;
+        $('ul').append(aLi);
+
+        $('textarea').val('');  // 在发布之后，清理textarea
+
+        if($('li').length > 0){
+            $('ul').css('border-bottom', '1px solid #ccc');
+        }
+    }
+
+    // 点击发布
+    $('div').click(function(){
+        fn();
+    });
+
+    // 用户可能要回车
+    $('textarea').keydown(function(e){
+        if(e.keyCode == 13){
+            e.preventDefault(); //阻止回车这个默认事件
+            fn();
+        }
+    })
+
+    // 删除事件（事件委托）
+    // 新增元素中子元素的事件，往往都是失效的
+    $('ul').on('click', 'a', function(){
+        $(this).parent().remove();  // 将li删除
+        if($('li').length <= 0){
+            $('ul').css('border-bottom', 0);
+        }
+    })
+</script>

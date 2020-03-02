@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-显示隐藏切换动画</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+            $("button").eq(0).click(function(){
+                $("div").show(400);
+            });
+            $("button").eq(1).click(function(){
+                $("div").hide(400, "linear", function(){
+                    alert("动画执行完毕")
+                });
+            });
+            $("button").eq(2).click(function(){
+                $("div").toggle(400);
+            });
+        })
+    </script>
+</head>
+<body>
+<button>显示动画</button>
+<button>隐藏动画</button>
+<button>切换动画</button>
+<div></div>
+</body>
+</html>

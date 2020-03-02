@@ -1,0 +1,95 @@
+body{
+	width:375px;
+	margin:auto;
+}
+a{
+	float:right;
+}
+img{
+	width:87.75px;
+	height:26px;
+	margin-top: 8px;
+}
+/*导航栏颜色*/
+#hh1{
+	background:#fff;
+}
+.hh2,.hh3,.hh4{
+	color:#fff;
+}
+.hh2,.hh3,.hh4{
+	margin:0px 0px 15px 15px;
+}
+.hh2,.hh3{
+	font-size: 14px;
+}
+.hh2{
+	margin-top:50px;
+}
+.hh4{
+	margin-top: 30px;
+	font-size: 12px;
+}
+.mui-slider-item img{
+	height:300px;
+	margin-top: 0px;
+}
+.mui-slider-title{
+	opacity: .5;
+}
+.mui-slider-item a{
+	height:300px;
+}
+.mui-slider-item p{
+	color:#fff;
+}
+.mui-slider-item p span{
+	margin-left: 20px;
+}
+/*一个奇怪的问题*/
+/*.weui-navbar{
+	margin-top: 300px;
+}*/
+h1{
+	height:100%;
+}
+/*列表图片*/
+.mui-table-view .mui-media-object{
+	max-width:120px;
+	height:75px;
+}
+.weui-tab__bd{
+	height:100%;
+}
+#tab1 ul li a{
+	width:375px;
+}
+/*导航条下的内容高度*/
+.weui-tab__bd #tab1 ul{
+	height: 100%;
+}
+/*.mui-table-view .mui-media-body
+{
+    overflow: auto;
+}*/
+.mui-scroll-wrapper {
+	overflow: auto;
+}
+.mui-scroll-wrapper{
+	
+	transform: none;
+}
+.mui-media a img {
+	margin-left: 10px;
+}
+.mui-media a div p{
+	text-align: center;
+	line-height: 75px;
+}
+footer{
+	height:50px;
+	background: Silver;
+	font-size: 12px;
+	padding:5px 0px 0px 0px;
+	text-align: center;
+}

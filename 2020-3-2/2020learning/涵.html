@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    
+    <title>Document</title>
+    <script src="jquery-3.4.1.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .content{
+        width: 1000px;
+        margin: auto;
+    }
+    .content li{
+        width: 100%;
+        border: 1px solid #000;
+        box-sizing: border-box;
+    }
+    .nav{
+        width: 100px;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid #000;
+        position: fixed;
+        left: 100px;
+        top: 50%;
+        margin-top: -101px;
+    }
+    .nav li{
+        cursor: pointer;
+    }
+    .nav li.current{
+        color: red;
+    }
+</style>
+<body>
+    <ul class="nav">
+        <li class="current">男装</li>
+        <li>女装</li>
+        <li>校服</li>
+        <li>秋衣</li>
+        <li>童装</li>
+    </ul>
+    <ul class="content">
+        <li>男装</li>
+        <li>女装</li>
+        <li>校服</li>
+        <li>秋衣</li>
+        <li>童装</li>
+    </ul>
+</body>
+    <script>
+        var colorArr = ['#cfc','#fcf','#fcc','#ccf','#ccc'];
+        var heightArr = [1000,600,732,500,1003];
+        // $.each(colorArr,function(i,el){
+        //     $('.nav li').eq(i).css('background',el);
+        //     $('.content li').eq(i).css('background',el);
+        // })
+        // function fn(tag,arr){
+        //     $.each(colorArr,function(i,el){
+        //         $(tag).eq(i).css('background',el);
+        //     })
+        // }
+        // fn('.nav li');
+        // fn('.content li');
+        function fn(tag,arr,hei){
+            $.each(arr,function(i,el){
+                $(tag).eq(i).css(hei,el);
+            })
+        }
+        fn('.content li',heightArr,'height');
+        fn('.nav li',colorArr,'background');
+        fn('.content li',colorArr,'background');
+        $('.nav li').click(function(){
+            var index = $(this).index();
+            var contentLiTop = $('.content li').eq(index).offset().top;
+</script>
+
+</html>

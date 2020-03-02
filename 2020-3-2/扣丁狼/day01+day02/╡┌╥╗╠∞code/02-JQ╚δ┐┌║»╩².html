@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-JQ入口函数</title>
+
+    <script>
+        //入口函数
+        window.onload = function(){
+            //页面所有资源(标签、图片、音频视频...)加载完毕之后，执行这里的代码
+            console.log(1)
+        };
+
+        window.onload = function(){
+            //页面所有资源(标签、图片、音频视频...)加载完毕之后，执行这里的代码
+            console.log(2)
+        };
+    </script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function(){
+            //文档(标签)加载完毕之后，执行这里的代码
+            console.log(3)
+        });
+        $().ready(function(){
+            //文档(标签)加载完毕之后，执行这里的代码
+            console.log(4)
+        });
+        $(function(){
+            //文档(标签)加载完毕之后，执行这里的代码
+            console.log(5)
+        })
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

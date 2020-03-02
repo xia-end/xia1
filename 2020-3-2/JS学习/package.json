@@ -1,0 +1,23 @@
+{
+  "name": "xww",
+  "version": "1.0.0",
+  "description": "Node.js",
+  "main": "(index.js)",
+  "scripts": {
+    "test": "make test",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xia-end/Node.js.git"
+  },
+  "keywords": [
+    "Xiaweiwei123"
+  ],
+  "author": "xww",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xia-end/Node.js/issues"
+  },
+  "homepage": "https://github.com/xia-end/Node.js#readme"
+}

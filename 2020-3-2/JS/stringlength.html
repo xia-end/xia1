@@ -1,0 +1,78 @@
+
+//求字符串长度 
+function fn(x) {
+	var i=0;
+	for(var str in x){
+		i++;
+	}	
+	return i;
+}
+console.log(fn("123"));
+// // 求字符串长度
+function fn(arr) {
+	for(var i = 0;;i++) {
+		if(arr[i]==undefined){
+			break;
+ 		}
+ 	}
+ 	return i;
+}
+//分割字符串为数组
+var split1 = "b";
+var str = "abcacbabcbcbabbcbcaaa";
+var arr = [];
+var num = 0;
+for(var i = 0; i<fn(str);i++) {
+	if(str[i]==split1) {
+		num++;
+	}
+	else{
+		
+		arr[num] += str[i]; 
+	}
+} 
+console.log(arr);
+//通过指定的字符合并数组为字符串
+function fn2(num,arr) {
+	str = "";
+	for(var i = 0; i < fn(arr);i++) {
+		if(i<fn(arr)-1){
+			str += (arr[i]+num);
+		}
+		else{
+			str += arr[i];
+		}	
+	}
+	return str;
+}
+console.log(fn2("2",1,2,3,4));
+//字符串搜索
+function fn3(str,search) {
+	var str1 = "";
+	for(var i=0;i<fn(str);i++) {
+		for(var j=0;j<fn(search);j++){
+			if(str[i]==search[j]) {
+				str1 += str[i];
+				if(str1==search) {
+					return i-j;
+				}
+			}
+		}
+	}
+}
+console.log(fn3("1234567","2"));
+//截取字符串
+var str = "1234567";
+var sub = 2;
+function fn4(str,sub){
+	var str1 = "";
+	for(var i=0;i<fn(str);i++) {
+		if(i==sub) {
+			str1 += str[i];
+			sub++;
+		}
+	}
+	return (str1);
+}
+
+

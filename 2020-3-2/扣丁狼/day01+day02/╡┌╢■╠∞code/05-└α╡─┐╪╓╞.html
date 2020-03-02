@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-类的控制</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background: pink;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    $(function(){
+
+        $("button").eq(0).click(function(){
+            $("div").addClass("box box2");  //可以同时添加多个类名
+        });
+        $("button").eq(1).click(function(){
+            $("div").removeClass("box");  //如果没有传参数，表示删除所有类名，传类名，表示指定删除类名
+        });
+        $("button").eq(2).click(function(){
+            $("div").toggleClass("box");
+        });
+    })
+    </script>
+
+
+</head>
+<body>
+<button>添加类</button>
+<button>删除类</button>
+<button>切换类</button>
+<div></div>
+</body>
+</html>

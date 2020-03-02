@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-</title>
+    <style>
+        li, p{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            border: 1px solid #000;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    $(function(){
+       $("li, p").click(function(){
+           alert($(this).index())
+       })
+
+        // jq给每个元素都进行编号，这个编号从0开始，我们成为这个元素的索引值。
+        // 获取索引值：   $(获取元素).index()
+        // 这个索引值和自己所在同级标签中的排行有关，和本身是什么标签没有关系
+    })
+    </script>
+</head>
+<body>
+    <ul>
+        <li>第1个</li>
+        <li>第2个</li>
+        <li>第3个</li>
+        <li>第4个</li>
+        <li>第5个</li>
+        <li>第6个</li>
+        <li>第7个</li>
+        <li>第8个</li>
+        <li>第9个</li>
+        <li>第10个</li>
+        <li>第11个</li>
+        <li>第12个</li>
+        <li>第13个</li>
+        <li>第14个</li>
+        <li>第15个</li>
+        <li>第16个</li>
+        <li>第17个</li>
+        <li>第18个</li>
+        <li>第19个</li>
+        <li>第20个</li>
+    </ul>
+    <p>这是p</p>
+</body>
+</html>

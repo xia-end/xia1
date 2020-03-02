@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08-透明度动画</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: none;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    $(function(){
+       $("button").eq(0).click(function(){
+           $("div").fadeIn();
+       });
+        $("button").eq(1).click(function(){
+            $("div").fadeOut();
+        });
+        $("button").eq(2).click(function(){
+            $("div").fadeToggle();
+        });
+        $("button").eq(3).click(function(){
+            $("div").fadeTo(1000,0.5);
+        });
+        $("button").eq(4).click(function(){
+            $("div").fadeTo(1000,1);
+        });
+    })
+    </script>
+</head>
+<body>
+<button>淡入动画</button>
+<button>淡出动画</button>
+<button>淡入淡出动画切换</button>
+<button>透明到0.5</button>
+<button>透明到1</button>
+<div></div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <style>
+        body, div, ul, ol, li, img, span{
+            margin: 0;
+            padding: 0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        body{
+            background: url("images/bg.jpg") no-repeat center top;
+        }
+        .warp{
+            width: 1146px;
+            height: 440px;
+            padding: 12px 12px 0;
+            margin: 30px auto 0;
+            background-color: rgba(255, 255, 255, .3);
+            box-shadow: 0 0 5px rgba(0, 0, 0, .3);
+        }
+        .wrapUp{
+            width: 1146px;
+            height: 400px;
+            position: relative;
+            overflow: hidden;
+        }
+        .wrapUp li{
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: none;
+        }
+        .wrapUp li.cur{
+            display: block;
+        }
+        .btn{
+            width: 40px;
+            height: 80px;
+            position: absolute;
+            left: -40px;
+            top: 50%;
+            background-color: rgba(0, 0, 0, .3);
+            border-radius: 5px;
+            color:#fff;
+            text-align: center;
+            line-height: 80px;
+            font-size:40px;
+            transform: translateY(-50%);
+            cursor: pointer;
+            font-family: "黑体";
+            transition: .4s;
+        }
+        .btnRight{
+            left: auto;
+            right: -40px;
+        }
+        .warp:hover .btnLeft{ left: 0;}
+        .warp:hover .btnRight{ right: 0;}
+
+        .wrapDown{
+            width: 800px;
+            height: 40px;
+            line-height: 40px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+        }
+        .wrapDown li{
+            float: left;
+            width: 200px;
+            cursor: pointer;
+        }
+        .wrapDown li:not(:last-child):after{
+            content: "|";
+            float: right;
+            color: #ddd;
+        }
+        .line{
+            width: 200px;
+            height: 1px;
+            background-color: #f00;
+            position: absolute;
+            left: 0px;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="warp">
+        <div class="wrapUp">
+            <ul>
+                <li class="cur"><img src="images/banner01.jpg" alt=""></li>
+                <li><img src="images/banner02.jpg" alt=""></li>
+                <li><img src="images/banner03.jpg" alt=""></li>
+                <li><img src="images/banner04.jpg" alt=""></li>
+            </ul>
+            <span class="btn btnLeft">&lt;</span>
+            <span class="btn btnRight">&gt;</span>
+        </div>
+        <div class="wrapDown">
+            <ol>
+                <li>大牌特惠</li>
+                <li>住进北欧</li>
+                <li>绵绵爱意</li>
+                <li>母婴盛宴</li>
+            </ol>
+            <span class="line"></span>
+        </div>
+    </div>
+</body>
+</html>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script>
+	//定义图片显示的初始索引值
+    var totalIndex = 0;
+    function fn(index){
+        $('.line').stop().animate({left: index * 200 + 'px'});
+        // 让轮播图的图片显示与隐藏
+        $('.wrapUp li').eq(index).fadeIn(300).siblings().fadeOut();
+    }
+
+    // 鼠标移上wrapDown中的li
+    $('.wrapDown li').mouseover(function(){
+        // li的宽度200px
+        var myIndex = $(this).index();
+        fn(myIndex);
+        totalIndex = myIndex; 
+        // 全局的索引需要跟当前hover到li上时的索引一致  
+    })
+
+    // 轮播图自动轮播
+    var timer = null;
+
+    dingshiqi();
+    // 默认开始就要自执行一次轮播    
+    // 轮播函数（拥有定时器）
+    function dingshiqi(){
+        timer = setInterval(rightFn, 3000)
+    }
+
+    // 正向变化的函数
+    function rightFn(){
+        totalIndex++;
+        if(totalIndex>3){
+            totalIndex = 0;
+        }
+        fn(totalIndex);
+    }
+
+    // 点击向右按钮，展现下一张图片
+    // 向右不能超出索引值
+    $('.btnRight').click(function(){
+        rightFn();
+    })
+    // 点击向左按钮，展现上一张图片
+    // 向左不能小于０
+    $('.btnLeft').click(function(){
+        totalIndex--;
+        if(totalIndex<0){
+            totalIndex = 3;
+        }
+        fn(totalIndex);
+    })
+    
+    // 鼠标移入暂停图片
+    $('.warp').mouseover(function(){
+        clearInterval(timer);
+    })
+    // 鼠标移出轮播继续
+    $('.warp').mouseout(function(){
+        dingshiqi();    // 重新执行轮播效果
+    })
+</script>

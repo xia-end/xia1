@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-命名冲突</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.4.1.js"></script>-->
+    <script>
+        $(function(){
+
+            var $ = 132;
+            // alert($);
+
+            console.log(jQuery("div").html());
+
+            // var jq = $.noConflict();
+            // console.log(jq("div").html());
+        })
+    </script>
+</head>
+<body>
+    <div>123</div>
+</body>
+</html>

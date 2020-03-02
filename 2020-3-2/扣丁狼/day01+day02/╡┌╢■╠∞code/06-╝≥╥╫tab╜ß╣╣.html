@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0; 
+				margin: 0; 
+				border: 0; 
+				list-style: none;
+				box-sizing: border-box;
+			}
+			.hamu{
+				width: 302px;
+				height: 362px;	
+				border: 1px solid #ccc;
+				margin: 100px auto;
+			}
+			.hamu ul{
+				height: 60px;
+				border-bottom: 1px solid #ccc;
+			}
+			.hamu ul li{
+				width: 100px;
+				height: 60px;
+				text-align: center;
+				line-height: 60px;
+				float: left;
+				color:#666;
+				border-right:1px solid #ccc;
+				cursor: pointer;
+			}
+			.hamu ul li:last-child{
+				border-right:none;
+			}
+			.hamu ul .cur{
+				color:deeppink;
+			}
+			.hamu ol li{
+				display: none;
+			}
+			.hamu ol .cur{
+				display: block;
+			}
+			
+		</style>
+		<script src="js/jquery-3.4.1.js"></script>
+		<script>
+		$(function(){
+		   $(".hamu ul li").mouseenter(function(){
+		   		// 给自己添加类 给兄弟删除类
+			   $(this).addClass("cur").siblings().removeClass("cur");
+
+			   // 下面ol中的li也要进行控制
+			   // 在ol中的3个li中选择1个添加cur类
+			   var i = $(this).index();
+			   $(".hamu ol li").eq(i).addClass("cur").siblings().removeClass("cur");
+		   })
+
+		})
+		</script>
+
+	</head>
+	<body>
+	<div class="hamu">
+		<ul>
+			<li class="cur">哈姆</li>
+			<li>思思</li>
+			<li>草莓</li>
+		</ul>
+		<ol>
+			<li class="cur"><img src="images/hamu/1.jpg" alt=""></li>
+			<li><img src="images/hamu/2.jpg" alt=""></li>
+			<li><img src="images/hamu/3.jpg" alt=""></li>
+		</ol>
+	</div>
+
+
+
+
+
+	</body>
+</html>

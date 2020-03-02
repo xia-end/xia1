@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>微博评论</title>
+	<style >
+		*{
+			margin:0px;
+			padding:0px;
+		}
+		div{
+			width:850px;
+			background:#efefef;
+			margin:auto;
+			margin-top: 100px;
+			padding:20px;
+			border:1px solid #cecece;
+			overflow: hidden;
+		}
+		textarea{
+			width:850px;
+			height:89px;
+			resize:none;
+			border:none;
+
+		}
+		span{
+			width: 80px;
+			float:right;
+			text-align: center;
+			line-height: 40px;
+			height:40px;
+			color:white;
+			background:#8E2323;
+			margin-top:15px;
+			cursor:pointer;
+		}
+		ul{
+			width:890px;
+			background:#efefef;
+			margin:auto;
+			margin-top:30px;
+			border:1px solid #cecece;
+			list-style: none;
+			/*padding:15px;*/
+			overflow: hidden;
+			border-bottom: none;
+		}
+		li{
+			padding:20px;
+			border-bottom: 1px solid #cecece;
+			overflow: hidden;
+		}
+		a{
+			float:right;
+			text-decoration:none;
+			font-size: 12px;
+			color:white;
+			width:30px;	
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			background: #8E2323;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<textarea></textarea>
+		<span>发布</span>
+	</div>
+	<ul>
+		<li>
+			<p>这是一条评论</p>
+			<a href="javascript:;">删除</a>
+		</li>
+	</ul>
+</body>
+</html>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+	function fn() {
+		var textVal =$('textarea').val();
+		if($.trim(textVal)==''){
+			return;
+		}
+		var aLi = `<li>
+						<p>${textVal}</p>
+						<a href="javascript:;">删除</a>
+				   </li>`;
+		$('ul').append(aLi);
+		$('textarea').val('');
+	}
+	$('span').click(function(){
+		fn();
+	});
+	// $('a').click(function(){
+	// 	$('li').remove();
+	// });
+	$('ul').on('click','a',function(){
+		$(this).parent().remove();
+	if($('li').length<0) {
+		$('ul').css('border',0);
+	}
+	});
+
+</script>

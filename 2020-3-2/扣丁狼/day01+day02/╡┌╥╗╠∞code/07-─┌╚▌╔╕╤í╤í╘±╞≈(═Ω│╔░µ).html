@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无标题文档</title>
+    <style>
+        div{
+            width: 500px;
+            height: 40px;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function(){
+
+            $("button:eq(0)").click(function(){
+                $("div:contains('天')").css("background-color", "pink");
+            });
+
+
+            $("button:eq(1)").click(function(){
+                $("div:empty").css("background-color", "pink");
+            });
+
+            $("button:eq(2)").click(function(){
+                $("div:parent").css("background-color", "pink");
+            });
+
+            $("button:eq(3)").click(function(){
+                $("div:has('span')").css("background-color", "pink");
+            });
+        })
+    </script>
+</head>
+<body>
+    <button>选择包含“天”字的div元素</button>
+    <button>选择不包含子元素或文本的空元素</button>
+    <button>选择含有子元素或者是文本的div元素</button>
+    <button>选择含有span子标签的div</button>
+    <div>天王盖地虎</div>
+    <div><span>我含有span</span></div>
+    <div>宝塔镇河妖</div>
+    <div></div>
+</body>
+</html>

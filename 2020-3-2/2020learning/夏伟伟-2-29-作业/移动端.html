@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>速涂网PhoneX效果</title>
+	<link rel="stylesheet" href="./css/weui.min.css">
+    <link rel="stylesheet" href="./css/jquery-weui.min.css">
+    <link rel="stylesheet" href="./css/mui.min.css">
+    <link rel="stylesheet" href="./css/stw.css">
+</head>
+<body>
+<!-- 侧滑菜单mOffcanvas -->
+        <!-- 菜单不动，主页面移动 -->
+        <!-- 侧滑导航根容器 -->
+        <div class="mui-off-canvas-wrap">
+            <!-- 菜单容器 -->
+            <aside class="mui-off-canvas-left" id="offCanvasSide1" style="background:#3ca5f6">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll" >
+                        <!-- 菜单具体展示内容 -->
+                        <div class="hh2">资讯</div>
+                        <div class="hh3">独角兽</div>
+                        <div class="hh3">互联网</div>
+                        <div class="hh3">创投</div>
+                        <div class="hh3">游戏</div>
+                        <div class="hh3">财经</div>
+                        <div class="hh4">登录　　注册</div>
+                    </div>
+                </div>
+            </aside>
+            <!-- 主页面容器 -->
+            <!-- mui-inner-wrap -->
+            <div class="mui-inner-wrap">
+                <!-- 主页面标题 -->
+                <header class="mui-bar mui-bar-nav" id="hh1">
+                    <img src="./images/logo1.png">
+                    <a class="mui-icon mui-action-menu mui-icon-bars mui-pull-rigth" href="#offCanvasSide1"></a>     
+                </header>
+                <div class="mui-content mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!-- 主界面具体展示内容 -->
+                        <!-- 九宫格mGrid -->
+                        <div class="mui-slider">
+                            <!-- mui-slider-group轮播图组 -->
+                          <div class="mui-slider-group mui-slider-loop">
+                            <!-- mui-slider-item轮播图子项 -->
+                                <div class="mui-slider-item  mui-slider-item-duplicate">
+                                    <div style="background:#ffff00;height:200px;line-height:200px;text-align:center;">
+                                         <a href="#"><img src="./images/4.jpg" /></a>
+                                    </div>
+                                    <p class="mui-slider-title">标题4     微博图片</p>
+                                </div>
+                                
+                                <div class="mui-slider-item">
+                                    <div style="background:#ff00ff;height:200px;line-height:200px;text-align:center;">
+                                        <a href="#"><img src="./images/1.jpg" /></a>
+                                    </div>
+                                    <p class="mui-slider-title">标题1<span>悬浮手机</span></p>
+                                </div>
+                                <div class="mui-slider-item">
+                                    <div style="background:#ffff00;height:200px;line-height:200px;text-align:center;">
+                                        <a href="#"><img src="./images/2.png" /></a>
+                                    </div>
+                                    <p class="mui-slider-title">标题2<span>免费口罩</span></p>
+                                </div>
+                                <div class="mui-slider-item">
+                                    <div style="background:#ffff00;height:200px;line-height:200px;text-align:center;">
+                                        <a href="#"><img src="./images/3.png" /></a>
+                                    </div>
+                                    <p class="mui-slider-title">标题3<span>办公工具</span></p>
+                                </div>
+                                <div class="mui-slider-item">
+                                    <div style="background:#ffff00;height:200px;line-height:200px;text-align:center;">
+                                        <a href="#"><img src="./images/4.png" /></a>
+                                    </div>
+                                    <p class="mui-slider-title">标题4<span>微博图片</span></p>
+                                </div>     
+                                <div class="mui-slider-item mui-slider-item-duplicate">
+                                    <div style="background:#ff00ff;height:200px;line-height:200px;text-align:center;">
+                                        <a href="#"><img src="./images/1.jpg" /></a>
+                                    </div>
+                                    <p class="mui-slider-title">标题1<span>悬浮手机</span></p>  
+                                </div>
+                          </div>
+                        </div>
+                        <!-- 容器 -->
+                        <div class="weui-tab">
+                            <div class="weui-navbar">
+                                <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+                                      最新文章
+                                </a>
+                                <a class="weui-navbar__item" href="#tab2">
+                                      新消费
+                                </a>
+                                <a class="weui-navbar__item" href="#tab3">
+                                      出行
+                                </a>
+                                <a class="weui-navbar__item" href="#tab4">
+                                      5G
+                                </a>
+                                <a class="weui-navbar__item" href="#tab5">
+                                      大文娱
+                                </a>
+                            </div>
+                          <div class="weui-tab__bd">
+                            <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+                              <h1>
+                                <ul class="mui-table-view">
+                                    <li class="mui-table-view-cell mui-media">
+                                        <a href="javascript:;">
+                                            <img class="mui-media-object mui-pull-left" src="./images/5.jpg">
+                                            <div class="mui-media-body">
+                                                <p class='mui-ellipsis'>文字内容1</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+                                        <a href="javascript:;">
+                                            <img class="mui-media-object mui-pull-left" src="./images/6.jpg">
+                                            <div class="mui-media-body">
+                                            
+                                                <p class='mui-ellipsis'>文字内容2</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+                                        <a href="javascript:;">
+                                            <img class="mui-media-object mui-pull-left" src="./images/7.jpg">
+                                            <div class="mui-media-body">
+                                                <p class='mui-ellipsis'>文字内容3</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="mui-table-view-cell mui-media">
+                                        <a href="javascript:;">
+                                            <img class="mui-media-object mui-pull-left" src="./images/8.jpg">
+                                            <div class="mui-media-body">
+                                                <p class='mui-ellipsis'>文字内容4</p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                              </h1>
+
+                            </div>
+                            <div id="tab2" class="weui-tab__bd-item">
+                              <h1>页面二</h1>
+                            </div>
+                            <div id="tab3" class="weui-tab__bd-item">
+                              <h1>页面三</h1>
+                            </div>
+                            <div id="tab4" class="weui-tab__bd-item">
+                              <h1>页面四</h1>
+                            </div>
+                            <div id="tab5" class="weui-tab__bd-item">
+                              <h1>页面五</h1>
+                            </div>
+                            <footer>
+                                关于速涂网　管理团队网站地图　联系我们　RSS 速涂官网
+                            </footer>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mui-off-canvas-backdrop"></div>
+            </div>
+        </div>　
+</body>
+</html>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery-weui.min.js"></script>
+
+<script src="./js/mui.min.js"></script>
+<script type="text/javascript">
+    //获得slider插件对象
+    var gallery = mui('.mui-slider');
+    gallery.slider({
+    interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+    });
+    //导航栏不可以双击
+//     $('.weui-navbar a').click(function(){
+//     $('.weui-tab__bd .weui-tab__bd-item').eq($(this).index()).show().siblings().hide()
+// })
+mui.plusReady(function() {  
+
+var wv=plus.webview.currentWebview();  
+
+wv.setStyle({'scrollIndicator':'none'});  
+
+});
+</script>

@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>节点属性</title>
+</head>
+<body>
+  <ul>
+     <li>javascript</li>
+     <li>HTML/CSS</li>
+     <li>jQuery</li>     
+  </ul>
+  <script type="text/javascript">
+  	var lName = document.getElementsByTagName("li");
+  	for(var i=0 ; i<lName.length ; i++) {
+  	document.write(lName[i].nodeName+"<br>");
+  	document.write(lName[i].nodeValue+"<br>");
+  	document.write(lName[i].nodeType+"<br>");
+  	}
+  </script>
+</body>
+</html>

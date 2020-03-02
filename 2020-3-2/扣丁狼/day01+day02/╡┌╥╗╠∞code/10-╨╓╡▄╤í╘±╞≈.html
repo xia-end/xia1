@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09-兄弟选择器</title>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function(){
+
+               // $(this).css("background-color", "pink");
+               // $(this).siblings().css("background-color", "");
+
+                $(this).css("background-color", "pink").siblings().css("background-color", "");
+            })
+        })
+    </script>
+</head>
+<body>
+<button>按钮！</button>
+<button>按钮！</button>
+<button>按钮！</button>
+<button>按钮！</button>
+<button>按钮！</button>
+<button>按钮！</button>
+<button>按钮！</button>
+<button>按钮！</button>
+<button>按钮！</button>
+<button>按钮！</button>
+</body>
+</html>

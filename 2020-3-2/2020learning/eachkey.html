@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>each key=value</title>
+</head>
+<body>
+
+</body>
+</html>
+<script src="jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+	var obj = {
+		name :"xia",
+		sex  : "女"
+	}
+	$.each(obj,function(key,value){
+		if(key=='sex'){
+			console.log(value);
+		}
+	});
+</script>

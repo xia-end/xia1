@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09-凸出展示动画效果</title>
+    <style>
+        ul, li, img{
+            margin: 0;padding: 0;
+        }
+        ul{
+            list-style: none;
+        }
+        body{
+            background: url("images/hamu/star.gif");
+        }
+        .box{
+            width: 630px;
+            margin: 100px auto ;
+            border: 1px solid #fff;
+            padding-left: 10px;
+            padding-top: 10px;
+            overflow: hidden;
+        }
+        .box li{
+            width: 200px;
+            height: 200px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            float: left;
+        }
+        .box li img{
+            width: 200px;
+            display: block;
+        }
+    </style>
+    <script src="js/jquery-3.4.1.js"></script>
+    <script>
+    $(function(){
+       $(".box li").mouseenter(function () {
+           // 兄弟盒子变成半透明
+           $(this).siblings().stop().fadeTo(400, .5);
+       }).mouseleave(function(){
+           // 所有li盒子都透明到1
+           $(".box li").stop().fadeTo(400, 1);
+       }).click(function(){
+            $(this).children().stop(true).slideUp().slideDown();
+       })
+    })
+    </script>
+</head>
+<body>
+    <!--ul.box>li*6>img[src=images/hamu/$.jpg]-->
+    <ul class="box">
+        <li><img src="images/hamu/1.jpg" alt=""></li>
+        <li><img src="images/hamu/2.jpg" alt=""></li>
+        <li><img src="images/hamu/3.jpg" alt=""></li>
+        <li><img src="images/hamu/4.jpg" alt=""></li>
+        <li><img src="images/hamu/5.jpg" alt=""></li>
+        <li><img src="images/hamu/6.jpg" alt=""></li>
+    </ul>
+</body>
+</html>
